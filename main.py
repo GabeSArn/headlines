@@ -9,7 +9,7 @@ def run_all():
     wbrc_headlines = sc.wbrc_scraper()
     dbc.add_headlines(wbrc_headlines, 'www.wbrc.com/')
     birmingham_al = sc.al_birmingham_scraper()
-    dbc.add_headlines(al_birmingham_scraper(), 'https://www.al.com/birmingham/')
+    dbc.add_headlines(birmingham_al, 'https://www.al.com/birmingham/')
     huntsville_news = sc.whnt_scraper()
     dbc.add_headlines(huntsville_news, 'https://www.whnt.com/')
         
