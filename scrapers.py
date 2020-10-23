@@ -1,3 +1,7 @@
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import re
+
 def al_data_title_scraper():
     al_data = urlopen('https://www.al.com/')
     al_soup = BeautifulSoup(al_data, 'html.parser')
