@@ -35,7 +35,7 @@ def show_headlines():
 
 def add_headlines(titles, source):
     today = date.today()
-    weekday = datetime.datetime.now().strftime(\"%A\")
+    weekday = datetime.datetime.now().strftime("%A")
     for i in titles:
         con = sqlite3.connect('news.db')
         cursor = con.cursor()
