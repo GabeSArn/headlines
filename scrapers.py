@@ -78,3 +78,40 @@ def whnt_scraper():
         titles.append(i.text.lstrip().rstrip())
     
     return list(set(titles))
+
+def wsb_tv2_scraper():
+
+    wsb_tv2 = urlopen('https://www.wsbtv.com/')
+    wsb_tv2_soup = BeautifulSoup(wsb_tv2,'html.parser')
+    articles = wsb_tv2_soup.find_all(class_='unstyled-link')
+
+    titles = []
+
+    for i in articles:
+        titles.append(i.text.rstrip().lstrip())
+    
+    return titles
+
+def nbc_dc_news_scraper():
+    ### NBC Washington D.C.
+    wdc_nbc4 = urlopen('https://www.nbcwashington.com/')
+    wdc_nbc4_soup = BeautifulSoup(wdc_nbc4, 'html.parser')
+    articles = wdc_nbc4_soup.find_all(class_='story-card__title')
+    titles = []
+    
+    for i in articles:
+        print(i.text.rstrip().lstrip())
+        
+    return titles
+
+def wdc_fox_scraper():
+    wdc_fox = urlopen('https://www.fox5dc.com/')
+    wdc_soup = BeautifulSoup(wdc_fox, 'html.parser')
+    articles = wdc_soup.find_all('article')
+
+    titles = []
+
+    for i in articles:
+        print(re.sub('\d\d\shours\sago','',i.text).rstrip().lstrip())
+        
+    return titles

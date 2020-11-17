@@ -12,5 +12,11 @@ def run_all():
     dbc.add_headlines(birmingham_al, 'https://www.al.com/birmingham/')
     huntsville_news = sc.whnt_scraper()
     dbc.add_headlines(huntsville_news, 'https://www.whnt.com/')
-        
+    wsb_tv2 = sc.wsb_tv2_scraper()
+    dbc.add_headlines(wsb_tv2, 'https://www.wsbtv.com/') 
+    nbc_dc = nbc_dc_news_scraper()
+    dbc.add_headlines(nbc_dc, 'https://www.nbcwashington.com/')    
+    wdc_fox = wdc_fox_scraper()
+    dbc.add_headlines(wdc_fox, 'https://www.fox5dc.com/')
+    
     return 'Program has sucessfully scraped and saved the data.'
