@@ -43,3 +43,11 @@ def add_headlines(titles, source):
         con.commit()
 
     con.close()
+    
+def grab_fox_titles():
+    con = sqlite3.connect('news.db')
+    cursor = con.cursor()
+    cursor.execute("SELECT article_title from news_titles WHERE source='www.fox10tv.com'")
+    titles = cursor.fetchall()
+    con.close()
+    return titles
