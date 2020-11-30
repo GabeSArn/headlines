@@ -51,3 +51,11 @@ def grab_fox_titles():
     titles = cursor.fetchall()
     con.close()
     return titles
+
+def grab_sources():
+    con = sqlite3.connect('news.db')
+    cursor = con.cursor()
+    cursor.execute("SELECT DISTINCT(source) from news_titles")
+    sources = cursor.fetchall()
+    con.close
+    return sources
