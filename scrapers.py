@@ -112,7 +112,7 @@ def wdc_fox_scraper():
     titles = []
 
     for i in articles:
-        print(re.sub('\d\d\shours\sago','',i.text).rstrip().lstrip())
+        titles.append(re.sub('\d\d\shours\sago','',i.text).rstrip().lstrip())
         
     return titles
 
