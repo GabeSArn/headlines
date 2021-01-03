@@ -227,5 +227,25 @@ def foxla():
 
     return articles
 
+def king5():
+    ### Seattle, WA
+    king5 = urlopen('https://www.king5.com/')
+    king5_soup = BeautifulSoup(king5, 'html.parser')
+    articles = king5_soup.find_all('a', class_='headline-list__title')
+
+    articles = [i.text for i in articles]
+
+    return articles
+
+def abc7_news_sf():
+    ### San Francisco, CA
+    abc7_news_sf = urlopen('https://abc7news.com/')
+    abc7_news_soup = BeautifulSoup(abc7_news_sf, 'html.parser')
+    articles = abc7_news_soup.find_all('div', class_='headline')
+
+    articles = [i.text for i in articles]
+
+    return articles
+
 
 
