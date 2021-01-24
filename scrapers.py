@@ -164,16 +164,6 @@ def click2_houston_scraper():
     return result
 
 def nyc_abc7_scraper():
-    ### Houston, Tx
-    nyc_abc7 = urlopen('https://abc7ny.com/new-york/')
-    nyc_soup = BeautifulSoup(nyc_abc7, 'html.parser')
-    articles = nyc_soup.find_all(class_='headline')
-
-    articles = [i.text for i in articles]
-    
-    return articles
-
-def nyc_abc7_scraper():
     ### New York City, NY
     nyc_abc7 = urlopen('https://abc7ny.com/new-york/')
     nyc_soup = BeautifulSoup(nyc_abc7, 'html.parser')
@@ -182,6 +172,7 @@ def nyc_abc7_scraper():
     articles = [i.text for i in articles]
     
     return articles
+
 
 def abc7_la_scraper():
     ### Los Angeles, CA
@@ -193,7 +184,7 @@ def abc7_la_scraper():
     
     return articles
 
-def nbc4_la():
+def nbc4_la_scraper():
     ### Los Angeles, CA
     nbc4_la = urlopen('https://www.nbclosangeles.com/')
     nbc4_soup = BeautifulSoup(nbc4_la, 'html.parser')
@@ -203,7 +194,7 @@ def nbc4_la():
     
     return articles
 
-def ktla():
+def ktla_scraper():
     ### Los Angeles, CA
     ktla = urlopen('https://ktla.com/news/')
     ktla_soup = BeautifulSoup(ktla, 'html.parser')
@@ -213,7 +204,7 @@ def ktla():
     
     return articles
 
-def foxla():
+def foxla_scraper():
     ### Los Angeles, CA
     foxla = urlopen('https://www.foxla.com/news')
     foxla_soup = BeautifulSoup(foxla, 'html.parser')
@@ -227,7 +218,7 @@ def foxla():
 
     return articles
 
-def king5():
+def king5_scraper():
     ### Seattle, WA
     king5 = urlopen('https://www.king5.com/')
     king5_soup = BeautifulSoup(king5, 'html.parser')
@@ -237,7 +228,7 @@ def king5():
 
     return articles
 
-def abc7_news_sf():
+def abc7_news_sf_scraper():
     ### San Francisco, CA
     abc7_news_sf = urlopen('https://abc7news.com/')
     abc7_news_soup = BeautifulSoup(abc7_news_sf, 'html.parser')
