@@ -238,5 +238,98 @@ def abc7_news_sf_scraper():
 
     return articles
 
+def cbs_kpix_scraper():
+    # San Francisco, CA
+    cbs_kpix_sf = urlopen('https://sanfrancisco.cbslocal.com/category/news/')
+    cbs_kpix_soup = BeautifulSoup(cbs_kpix_sf, 'html.parser')
+    titles = cbs_kpix_soup.find_all('strong', class_='title')
+
+    articles = []
+
+    for title in titles:
+        check = title.text.split(' ')
+        if len(check) > 4:
+            articles.append(title.text)
+            
+    articles = list(set(articles))
+        
+    return articles
+
+def the_sfnews_scraper():
+    # San Francisco, CA
+    the_sfnews = urlopen('https://www.thesfnews.com/')
+    the_sfnews_soup = BeautifulSoup(the_sfnews, 'html.parser')
+    titles = the_sfnews_soup.find_all('a', class_='td-image-wrap')
+
+    articles = []
+
+    for title in titles:
+        articles.append(title['title'])
+    
+    articles = list(set(articles))
+    
+    return articles
+
+def kswb_fox_5_scraper():
+    ### San Diego, CA
+    kswb_fox_5_sd = urlopen('https://fox5sandiego.com/')
+    kswb_fox_5_soup = BeautifulSoup(kswb_fox_5_sd, 'html.parser')
+    titles = kswb_fox_5_soup.find_all('h3', class_='article-list__article-title')
+
+    articles = []
+
+    for title in titles:
+        if len(title) > 2:
+            articles.append(title.text.rstrip().lstrip())
+    
+    articles = list(set(articles))   
+    
+    return articles
+
+def nbc7_san_diego_scraper():
+    ### San Diego, CA
+    nbc7_san_diego = urlopen('https://www.nbcsandiego.com/news/local/')
+    nbc7_san_diego_soup = BeautifulSoup(nbc7_san_diego, 'html.parser') 
+    titles = nbc7_san_diego_soup.find_all('h3', class_='story-card__title')
+
+    articles = []
+
+    for title in titles:
+        print(title.text.rstrip().lstrip())
+        
+    articles = list(set(articles))   
+    
+    return articles
+
+def kusi_scraper():
+    ### San Diego, CA
+    kusi = urlopen('https://www.kusi.com/local-san-diego-news/')
+    kusi_soup = BeautifulSoup(kusi, 'html.parser')
+    titles = kusi_soup.find_all('h3', class_='entry-title')
+
+    articles = []
+
+    for title in titles:
+        print(title.text)
+        
+    articles = list(set(articles))
+    
+    return articles
+
+def cbs8_sd_scaper():
+    ###CBS 8 - San Diego
+    cbs8 = urlopen('https://www.cbs8.com/')
+    cbs8_soup = BeautifulSoup(cbs8, 'html.parser')
+    titles = cbs8_soup.find_all('a', class_='headline-list__title')
+
+    articles = []
+
+    for title in titles:
+        articles.append(title.text)
+    
+    articles = list(set(articles))
+
+    return articles
+
 
 
