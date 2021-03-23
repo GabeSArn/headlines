@@ -56,6 +56,21 @@ def run_all():
     ### San Francisco, CA
     abc7_news_sf = sc.abc7_news_sf_scraper()
     dbc.add_headlines(abc7_news_sf, 'https://abc7news.com/')
+    cbs_kpix = sc.cbs_kpix_scraper()
+    dbc.add_headlines(cbs_kpix, 'https://sanfrancisco.cbslocal.com/category/news/')
+    sfnews = sc.the_sfnews_scraper()
+    dbc.add_headlines(sfnews, 'https://www.thesfnews.com/')
+    
+    
+    ### San Diego, CA
+    kswb_fox_5 = sc.kswb_fox_5_scraper()
+    dbc.add_headlines(kswb_fox_5, 'https://fox5sandiego.com/')
+    nbc7_san_diego = sc.nbc7_san_diego_scraper()
+    dbc.add_headlines(nbc7_san_diego, 'https://www.nbcsandiego.com/news/local/')
+    kusi = sc.kusi_scraper()
+    dbc.add_headlines(kusi, 'https://www.kusi.com/local-san-diego-news/')
+    cbs8_sd = sc.cbs8_sd_scaper()
+    dbc.add_headlines(cbs8_sd, 'https://www.cbs8.com/')
     
     ### Seattle, WA
     king5 = sc.king5_scraper()
