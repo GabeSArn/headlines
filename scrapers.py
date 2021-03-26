@@ -295,7 +295,7 @@ def nbc7_san_diego_scraper():
     articles = []
 
     for title in titles:
-        print(title.text.rstrip().lstrip())
+        articles.append(title.text.rstrip().lstrip())
         
     articles = list(set(articles))   
     
@@ -310,7 +310,7 @@ def kusi_scraper():
     articles = []
 
     for title in titles:
-        print(title.text)
+        articles.append(title.text)
         
     articles = list(set(articles))
     

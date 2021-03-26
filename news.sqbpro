@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/gabrielarnold/Desktop/Coding/pythoncode/projects/scrapers/news_scraper/news.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="990"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,12:mainnews_sources"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="news_sources" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="43"/><column index="2" value="34"/><column index="3" value="27"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">SELECT * FROM news_titles;</sql><current_tab id="0"/></tab_sql></sqlb_project>
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/gabrielarnold/Desktop/Coding/pythoncode/projects/scrapers/news_scraper/news.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="990"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,12:mainnews_sources"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="news_sources" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="43"/><column index="2" value="34"/><column index="3" value="27"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">SELECT * FROM news_titles
+WHERE location == 'California';
+
+-- UPDATE news_titles
+-- SET location == 'California'
+-- WHERE source == 'https://www.nbclosangeles.com/' or source == 'https://ktla.com/news/'  or source == 'https://www.cbs8.com/';
+-- 
+-- UPDATE news_titles
+-- SET location == 'Texas'
+-- WHERE source == 'https://www.click2houston.com/news/' or source == 'https://abc13.com/houston/'  or source == 'https://www.khou.com/texas' or source == 'https://www.fox26houston.com/news';
+-- 
+-- UPDATE news_titles
+-- SET location == 'Alabama'
+-- WHERE source == 'https://www.wbrc.com/' or source == 'https://www.whnt.com/';
+-- 
+-- UPDATE news_titles
+-- SET location == 'Washington D.C.'
+-- WHERE source == 'https://www.fox5dc.com/' or source == 'https://www.nbcwashington.com/';
+-- 
+-- UPDATE news_titles
+-- SET location == 'New York'
+-- WHERE source == 'https://abc7ny.com/new-york/';
+-- 
+-- UPDATE news_titles
+-- SET location == 'Washington'
+-- WHERE source == 'https://www.king5.com/';</sql><current_tab id="0"/></tab_sql></sqlb_project>
