@@ -2,6 +2,10 @@
 
 ![image](/assets/pics/alabama_wordcloud.png)
 
-The United States is fascinated with the news. But what if we look at all different news stations, what is most of the content about? By observing the news over time we can quantify the overall makeup of headlines and see if there are meaningful differences between different news sources.
+### Background
+The United States is fascinated with the news. But what if we look at all different news stations, what is most of the content about? By observing the news over time we can quantify if the news is negative, positive or neutral.
 
-By observing the headlines, we may get a glimpse of the ways the information is communicated, and we may be able to understand different perspectives that people have based on the news that they receive.
+### Data Description
+Data is scraped from various news sources. Each state's three largest cites will be represented in the overall dataset.
+
+Dataset contains original source, the state, and the date that the headline was scraped.
